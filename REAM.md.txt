@@ -1,25 +1,6 @@
-🏥 RAG-basiertes Wissenssystem für die Pflege
-Ein Prototyp für die digitale Assistenzplattform "hilfefuersenioren"
-
-💡 Die Idee
-Angehörige von pflegebedürftigen Senioren stehen oft vor einem Berg aus komplexen Formularen und Richtlinien. Dieses Projekt ist ein Proof of Concept (PoC) für einen Pflege-Chatbot, der mithilfe von Retrieval-Augmented Generation (RAG) Fragen auf Basis offizieller Pflegedokumentationen (PDFs) beantwortet, ohne zu "halluzinieren".
-
-🛠️ Tech Stack
-Framework: LangChain
-
-Embeddings: Hugging Face (paraphrase-multilingual-MiniLM-L12-v2 für optimale deutsche Texterkennung)
-
-Vektordatenbank: ChromaDB
-
-Datenverarbeitung: PyPDF, RecursiveCharacterTextSplitter
-
-🚀 Was das Skript macht
-Lädt ein unstrukturiertes PDF (z.B. Handbuch Pflegedokumentation).
-
-Zerschneidet den Text in überlappende Chunks (1000 Zeichen).
-
-Generiert Vektor-Embeddings und speichert sie lokal in einer Chroma-Datenbank.
-
-Führt eine semantische Ähnlichkeitssuche (similarity_search) durch, um die relevantesten Absätze für eine Nutzerfrage zu finden.
-
-Baut einen System-Prompt für ein LLM zusammen, um die finale Antwort zu generieren.
+pypdf==4.0.1
+langchain==0.1.0
+langchain-huggingface==0.1.0
+langchain-chroma==0.1.0
+chromadb==0.4.22
+sentence-transformers==2.3.1
